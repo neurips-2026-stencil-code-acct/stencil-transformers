@@ -1,0 +1,13 @@
+{
+  "substitutions": "analysis\\is_it_mechanistic\\results\\substitution.csv",
+  "head_preserving_substitutions": "analysis\\is_it_mechanistic\\results\\head_preserving\\substitution.csv",
+  "fourier_metrics": "analysis\\fourier_domain_operator\\results\\fourier_support_metrics.csv",
+  "pdes": [
+    "heat",
+    "lf"
+  ],
+  "n_bootstrap": 20000,
+  "confidence": 0.95,
+  "bootstrap_seed": 20260824,
+  "resampling": "Within each PDE-parameter condition, sample model seeds with replacement. Compute each paired effect before resampling."
+}

@@ -1,0 +1,17 @@
+{
+  "jacobian": "analysis\\is_it_mechanistic\\results\\jacobian.csv",
+  "profiles": "analysis\\is_it_mechanistic\\results\\jacobian_profiles.npz",
+  "pdes": [
+    "heat",
+    "lf"
+  ],
+  "n_bootstrap": 20000,
+  "confidence": 0.95,
+  "bootstrap_seed": 20260824,
+  "checkpoint_rerun_required": false,
+  "reason": "Identity is circulant, and circular-diagonal averaging is the Frobenius-orthogonal projection onto circulant matrices.",
+  "edge_cases": {
+    "projection_zero_and_residual_one": "absolute norms cannot be reconstructed from the saved relative residual",
+    "j_equals_identity": "the relative residual of the zero update is undefined"
+  }
+}

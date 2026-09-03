@@ -1,0 +1,7 @@
+# Versions in the environment used to validate this snapshot on 2026-09-02.
+# Install the PyTorch build appropriate for the target CPU/CUDA platform.
+numpy==2.5.0
+pandas==3.0.3
+scipy==1.18.0
+matplotlib==3.11.0
+torch==2.7.1

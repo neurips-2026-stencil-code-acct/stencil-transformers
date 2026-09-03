@@ -1,0 +1,51 @@
+# Matplotlib stylesheet for NeurIPS-sized paper figures.
+#
+# Usage:
+#   plt.style.use(Path(__file__).with_name("neurips.mplstyle"))
+#
+# Figure widths are controlled in Python. Use 3.25 inches for one column and
+# 6.75 inches for two columns.
+
+font.family: serif
+font.serif: Times New Roman, Times, DejaVu Serif
+mathtext.fontset: stix
+
+font.size: 8
+axes.labelsize: 9
+axes.titlesize: 9
+xtick.labelsize: 7
+ytick.labelsize: 7
+legend.fontsize: 7.5
+
+axes.linewidth: 0.8
+axes.spines.top: False
+axes.spines.right: False
+axes.prop_cycle: cycler('color', ['d62728', '1f77b4', 'ff7f0e', '2ca02c', '9467bd', '8c564b', 'e377c2', '7f7f7f'])
+
+lines.linewidth: 1.25
+lines.markersize: 4
+patch.linewidth: 0.8
+
+xtick.direction: in
+ytick.direction: in
+xtick.major.width: 0.8
+ytick.major.width: 0.8
+xtick.minor.visible: True
+ytick.minor.visible: True
+xtick.minor.width: 0.5
+ytick.minor.width: 0.5
+
+legend.frameon: False
+legend.borderpad: 0.3
+legend.handlelength: 1.5
+legend.handletextpad: 0.5
+legend.columnspacing: 1.0
+
+figure.dpi: 150
+savefig.dpi: 300
+savefig.bbox: tight
+savefig.pad_inches: 0.02
+savefig.transparent: False
+
+pdf.fonttype: 42
+ps.fonttype: 42

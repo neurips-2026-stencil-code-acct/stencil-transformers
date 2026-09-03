@@ -1,0 +1,27 @@
+{
+  "source": "analysis\\is_it_mechanistic\\results\\head_preserving\\substitution.csv",
+  "pdes": [
+    "heat",
+    "lf"
+  ],
+  "contrasts": [
+    [
+      "frozen_per_head_validation",
+      "original"
+    ],
+    [
+      "frozen_layer_mean_validation",
+      "frozen_per_head_validation"
+    ],
+    [
+      "analytical_stencil",
+      "frozen_per_head_validation"
+    ]
+  ],
+  "n_bootstrap": 20000,
+  "confidence": 0.95,
+  "bootstrap_seed": 20260824,
+  "resampling": "Paired effects are computed within each model, then model seeds are sampled with replacement within each PDE-parameter condition.",
+  "primary_effect": "mean paired log MSE ratio",
+  "separate_secondary_effect": "mean paired excess-error difference"
+}
