@@ -1,5 +1,14 @@
 # Stencil Transformers paper reproducibility snapshot
 
+## Authorship
+
+Author: Matthew Shell
+
+This repository is the paper-scoped reproducibility snapshot of
+https://github.com/shellmatthewk/stencil-transformers.
+
+Associated paper: https://openreview.net/forum?id=6ypqc2JAmV
+
 This folder is the readable, paper-scoped subset of the parent repository. It
 contains the code, compact intermediate arrays, saved tables, validation tests,
 and final figures needed to inspect the heat-equation and Lax--Friedrichs
