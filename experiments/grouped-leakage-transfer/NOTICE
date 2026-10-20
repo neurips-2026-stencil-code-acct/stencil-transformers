@@ -1,0 +1,5 @@
+OpenRSI external-experience transfer controller prototype
+
+This source bundle was prepared in the OpenRSI-Index workspace for Matthew Shell's proposal. The bundled original code and documentation use the accompanying Apache License 2.0.
+
+The Qwen model, llama.cpp runtime and OpenRSI Harness are separate upstream works. They are not vendored here and retain their own licenses. The stencil-transformers project is conceptual background; no PDE project code is copied into this bundle.

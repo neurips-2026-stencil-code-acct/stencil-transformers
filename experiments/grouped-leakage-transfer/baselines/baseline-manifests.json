@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "purpose": "Public matched-control delivery; no baseline repair performance has been measured.",
+  "none": {
+    "experience_directory": null,
+    "model_visible_package_files": [],
+    "manifest": {},
+    "materialization": "Do not supply --experience; no learned artifact is required."
+  },
+  "generic": {
+    "experience_directory": "baselines/generic-v2-draft",
+    "model_visible_package_files": [
+      {
+        "path": "generic_guidance.txt",
+        "bytes": 479,
+        "sha256": "ea061cc275386cdf98582c73341696cebd477306adb2e5f67449f262dc039478"
+      }
+    ],
+    "authorship": "Original five requirements supplied by Matthew Shell; the first item was revised by the agent and explicitly approved by the contributor to cover both prediction goals. The other four retain the contributor wording.",
+    "directory_name_note": "The historical draft suffix does not mean the approved wording is unresolved.",
+    "primary_score": "For each condition, min(unseen-unit verified repair rate, future-observation verified repair rate).",
+    "freeze": "Use these exact bytes for generic control; freeze all final settings before reserved evaluation."
+  },
+  "fixed_execution": {
+    "inference_lock": "inference-dual-gpu.lock.json",
+    "inference_lock_sha256": "b4e45ec71ebf730597f66e48e2928fe70a80c2c81220df8820453dd5c6cac252",
+    "agent_loop_lock": "agent-loop.lock.json",
+    "agent_loop_lock_sha256": "02bd156d0aeee8bfdc79169122b39e07aeccb56f4f82e40cc798f2249e6569ac",
+    "matching": "The same model, instructions, tools, loader and budgets for every condition. All arms of each case use the same preassigned worker."
+  },
+  "boundary": "Manifest/provenance files are outside the supplied experience directory. The accumulated experience package is produced later from verified source/development repairs, not delivered as a pre-existing result."
+}

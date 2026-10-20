@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Benchmark protocol budget input",
+  "description": "Overall caps are contributor-approved. Positive implementation guardrails must be bound consistently during task construction and frozen before evaluation. This descriptive schema is not an installed validation dependency.",
+  "type": "object",
+  "required": [
+    "max_model_calls",
+    "max_total_tokens",
+    "max_wall_seconds",
+    "max_command_seconds",
+    "max_command_output_bytes",
+    "max_tool_output_bytes",
+    "max_http_response_bytes",
+    "max_repository_bytes",
+    "max_repository_files",
+    "max_new_tokens_per_call",
+    "cleanup_grace_seconds"
+  ],
+  "properties": {
+    "max_model_calls": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "const": 30
+    },
+    "max_total_tokens": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "const": 128000
+    },
+    "max_wall_seconds": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "const": 900
+    },
+    "max_command_seconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "max_command_output_bytes": {
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "max_tool_output_bytes": {
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "max_http_response_bytes": {
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "max_repository_bytes": {
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "max_repository_files": {
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "max_new_tokens_per_call": {
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "cleanup_grace_seconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  },
+  "additionalProperties": false
+}

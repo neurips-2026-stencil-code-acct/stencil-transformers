@@ -1,0 +1,44 @@
+{
+  "checked_utc": "2026-10-20T10:11:40.454971+00:00",
+  "method": "Unauthenticated public HTTPS through Python urllib; no browser session, credentials or cookies supplied.",
+  "records": [
+    {
+      "kind": "poster",
+      "requested_url": "https://neurips.cc/virtual/2026/loc/sydney/poster/174597",
+      "resolved_url": "https://neurips.cc/virtual/2026/loc/sydney/poster/174597",
+      "http_status": 200,
+      "credentials_or_cookies_supplied": false,
+      "title": "Climate Field Reconstruction Under Station Sparsity and Geographic Shift",
+      "authors": [
+        "Matthew Shell",
+        "Varun Panuganti"
+      ],
+      "workshop": "NeurIPS 2026 Workshop on Tackling Climate Change with Machine Learning",
+      "excerpt": "xpo AI Reviewing Experiment Attend Hotels Visa Information Volunteering and Financial Assistance Attending with Children Organizers Organizing Committee NeurIPS Board NeurIPS Foundation Exhibitors 2026 Exhibitors Portal EAC Information Poster in Workshop: NeurIPS 2026 Workshop on Tackling Climate Change with Machine Learning Climate Field Reconstruction Under Station Sparsity and Geographic Shift Matthew Shell ⋅ Varun Panuganti presentation: NeurIPS 2026 Workshop on Tackling Climate Change with Machine Learning Project Page [ OpenReview ] Abstract Uneven station coverage limits regional analysis of temperature, precipitation, and climate extr",
+      "openreview_links": [
+        "https://openreview.net/forum?id=WHbp01Qvtw"
+      ],
+      "evidence_scope": "Official public workshop presentation record. This is not a full manuscript review or validation of reported scientific results.",
+      "presentation_label": "Poster in Workshop"
+    },
+    {
+      "kind": "oral",
+      "requested_url": "https://neurips.cc/virtual/2026/loc/sydney/oral/174598",
+      "resolved_url": "https://neurips.cc/virtual/2026/loc/sydney/oral/174598",
+      "http_status": 200,
+      "credentials_or_cookies_supplied": false,
+      "title": "Climate Field Reconstruction Under Station Sparsity and Geographic Shift",
+      "authors": [
+        "Matthew Shell",
+        "Varun Panuganti"
+      ],
+      "workshop": "NeurIPS 2026 Workshop on Tackling Climate Change with Machine Learning",
+      "excerpt": " Expo AI Reviewing Experiment Attend Hotels Visa Information Volunteering and Financial Assistance Attending with Children Organizers Organizing Committee NeurIPS Board NeurIPS Foundation Exhibitors 2026 Exhibitors Portal EAC Information Oral in Workshop: NeurIPS 2026 Workshop on Tackling Climate Change with Machine Learning Climate Field Reconstruction Under Station Sparsity and Geographic Shift Matthew Shell ⋅ Varun Panuganti presentation: NeurIPS 2026 Workshop on Tackling Climate Change with Machine Learning Project Page [ OpenReview ] Abstract Uneven station coverage limits regional analysis of temperature, precipitation, and climate extr",
+      "openreview_links": [
+        "https://openreview.net/forum?id=WHbp01Qvtw"
+      ],
+      "evidence_scope": "Official public workshop presentation record. This is not a full manuscript review or validation of reported scientific results.",
+      "presentation_label": "Oral in Workshop"
+    }
+  ]
+}

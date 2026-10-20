@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "Prototype for the proposal; overall target budgets are contributor-confirmed, while implementation guardrails and benchmark verifier are not finalized.",
+  "controller_file": "coding_agent.py",
+  "controller_sha256": "c41dbce9580aea64208a8a77f296b7ca141f54c42d0860fed9eb7c22e6a98413",
+  "tests_file": "test_coding_agent.py",
+  "tests_sha256": "b7481d242e657791e063e23e344143155801896133826f10a00b8fd72a0df21e",
+  "inference_lock_file": "inference-dual-gpu.lock.json",
+  "inference_lock_sha256": "b4e45ec71ebf730597f66e48e2928fe70a80c2c81220df8820453dd5c6cac252",
+  "chat_template_sha256": "55b2f4a26ac9ee719330a61a0c39d9e538b0e9322212f048326318cff4f8674a",
+  "base_tools": [
+    "list_files",
+    "read_file",
+    "search",
+    "write_file",
+    "replace_text",
+    "run_test",
+    "finish"
+  ],
+  "command_policy": "The evaluator supplies one fixed mapping of test-command IDs to exact argument arrays, identical across all conditions.",
+  "experience_loading": "The same read-only experience file tools and loader serve each condition; only assigned package contents differ. Loading/reading time and resulting prompt tokens consume target budgets.",
+  "model_identity": "The trusted launcher must verify pinned model/runtime bytes and bind the controller endpoint to its own process; the controller alone does not attest endpoint identity.",
+  "target_code_execution": "Existing Linux Harness rsi-isolate required, without network; no Windows or same-user fallback.",
+  "budget_policy": "Contributor-confirmed overall caps: 900 seconds, 30 model generations, 128000 cumulative input/output tokens, whichever is reached first; all conditions share these caps and retries consume the same attempt allowance. See evaluation-decisions.json for counted units. Additional guardrails remain required explicit inputs; no defaults are supplied.",
+  "outcomes": "An agent finish remains unverified until the separate leakage verifier checks the executed pipeline.",
+  "validation": {
+    "offline_tests_passed": 15,
+    "offline_tests_total": 15,
+    "live_model_adapter": "passed_without_executing_generated_action",
+    "full_tool_loop": "not_run",
+    "leakage_verifier": "not_implemented",
+    "dual_gpu_native_adapter": "Both workers passed concurrent inference, exact action/token checks, all49layers CUDA offload and CUDA KV allocation; no generated action executed.",
+    "dual_gpu_preflight_result_file": "dual-gpu-preflight-result-v2.json"
+  },
+  "previous_inference_snapshot": {
+    "file": "inference.lock.json",
+    "sha256": "c5aba7d0cc16eec7125e3d4c4b85b1b4647dba37bd33a6875d580ec082502541",
+    "result_file": "inference-preflight-result.json",
+    "note": "Historical single-GPU CUDA12.4/12-CPU-thread preflight; not the selected two-worker configuration."
+  },
+  "worker_policy": "Two independent local model workers, one serialized slot per GPU, no sharding. Both normal and batch CPU thread counts equal inference.threads (six per worker). Freeze a goal-balanced case-to-worker assignment before results; all conditions for a case use the same worker. Keep each experience version frozen until all its evaluations close."
+}

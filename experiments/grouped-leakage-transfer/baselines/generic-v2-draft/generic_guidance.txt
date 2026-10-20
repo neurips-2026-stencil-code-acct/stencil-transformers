@@ -1,0 +1,5 @@
+- the split matches the stated prediction goal: unseen-unit tasks keep groups disjoint; future-observation tasks use only information available before each prediction time; apply both restrictions only when the task requires both;
+- preprocessing statistics are fit on training data only;
+- the repaired training and evaluation pipeline executes;
+- the reported metric is computed on the repaired held-out split;
+- the patch does not bypass, weaken, or delete the leakage check.

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "purpose": "File inventory for prepared public execution overlay; not a frozen accumulated-experience package.",
+  "hash_algorithm": "sha256",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 26,
+      "sha256": "57db6342bb193c3763dd834369934401386d7614303a16ba2792c35c2dece2c5"
+    },
+    {
+      "path": "agent-loop.lock.json",
+      "bytes": 3216,
+      "sha256": "02bd156d0aeee8bfdc79169122b39e07aeccb56f4f82e40cc798f2249e6569ac"
+    },
+    {
+      "path": "baselines/baseline-manifests.json",
+      "bytes": 1887,
+      "sha256": "d0e48d0a75808cf4308f787c5b8707a2857cae47007fdef223184f1736973b2e"
+    },
+    {
+      "path": "baselines/generic-v2-draft/generic_guidance.txt",
+      "bytes": 479,
+      "sha256": "ea061cc275386cdf98582c73341696cebd477306adb2e5f67449f262dc039478"
+    },
+    {
+      "path": "coding_agent.py",
+      "bytes": 29847,
+      "sha256": "c41dbce9580aea64208a8a77f296b7ca141f54c42d0860fed9eb7c22e6a98413"
+    },
+    {
+      "path": "dual-gpu-preflight-result-v2.json",
+      "bytes": 24713,
+      "sha256": "6cee1b0f5fb4562b044c5b988825dbf31d392c5e5ee5a4787c47cfb91df757ad"
+    },
+    {
+      "path": "inference-dual-gpu.lock.json",
+      "bytes": 4587,
+      "sha256": "b4e45ec71ebf730597f66e48e2928fe70a80c2c81220df8820453dd5c6cac252"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11558,
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 486,
+      "sha256": "81b8db9a8aef81fb5616af88fe6232cbc805f733447b66667fdca57d2037b8da"
+    },
+    {
+      "path": "probe_dual_gpu_inference.py",
+      "bytes": 12893,
+      "sha256": "3b3a7c5d8c2add51e1735fd548ea70e3828112d80bc39882e7c270a0fdc44cdf"
+    },
+    {
+      "path": "probe_local_inference.py",
+      "bytes": 12622,
+      "sha256": "3b23a73d8c5053de4d484a654b5868c80cca2bf5527a9862db18783bfa971b28"
+    },
+    {
+      "path": "PUBLIC-EVIDENCE.md",
+      "bytes": 4371,
+      "sha256": "541be653c375172929334d441bcbd76b5fe8ac91b7649772601956bfd6b71142"
+    },
+    {
+      "path": "public-venue-record.json",
+      "bytes": 3243,
+      "sha256": "2db086c35b0b338ce92f06c0a597113c8508f84e95ccdb9c1850e95f04d5bcca"
+    },
+    {
+      "path": "README.md",
+      "bytes": 18523,
+      "sha256": "5757416b213e3a2adec7e9f24d8cc0430d0a87846cc1b728529a301f451657b1"
+    },
+    {
+      "path": "schemas/budgets.schema.json",
+      "bytes": 1801,
+      "sha256": "2e3580771932965cd89379e6fc7822a290a4a5fec4648c5c43851c315155d8ae"
+    },
+    {
+      "path": "schemas/commands.schema.json",
+      "bytes": 592,
+      "sha256": "b5edcf795cb444a58b40e12dc1bb1972ada0044b44d3beaf438b22a06231cc76"
+    },
+    {
+      "path": "test_coding_agent.py",
+      "bytes": 11520,
+      "sha256": "b7481d242e657791e063e23e344143155801896133826f10a00b8fd72a0df21e"
+    },
+    {
+      "path": "validation-record.json",
+      "bytes": 796,
+      "sha256": "e2b766638f5e511e3ec6902f6c4937ab8144acc9d459f3451d768565ddf6316d"
+    }
+  ]
+}

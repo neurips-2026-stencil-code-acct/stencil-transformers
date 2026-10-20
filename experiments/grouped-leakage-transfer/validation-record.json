@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-20T09:47:56.723566+00:00",
+  "command": "C:\\Python312\\python.exe -B -m unittest -v test_coding_agent.py",
+  "execution_directory": "release-draft",
+  "passed": 15,
+  "total": 15,
+  "scope": "Trusted local mock-controller tests only; no model, target code, or network calls.",
+  "source_copies": "All eight copied implementation/lock/guidance/native-probe evidence files match existing local originals byte-for-byte.",
+  "native_inference_evidence": "Historical selected native dual-worker record included unchanged; not rerun during release preparation.",
+  "linux_execution": "Not validated",
+  "leakage_verifier": "Not implemented",
+  "benchmark_repair_success": "Not measured",
+  "publication": "Prepared local source bundle; not yet published."
+}

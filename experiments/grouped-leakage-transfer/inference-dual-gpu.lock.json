@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "purpose": "Two-GPU inference configuration for the proposed fixed-weight experience-transfer benchmark; native preflight is distinct from Linux Harness and repair validation.",
+  "model": {
+    "repository": "Qwen/Qwen2.5-Coder-14B-Instruct-GGUF",
+    "revision": "d0a692ef765eefbf2fabb130b3cb2e8917e3d225",
+    "filename": "qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+    "quantization": "Q4_K_M",
+    "size_bytes": 8988110272,
+    "sha256": "c1e659736d89ac1065fb495330fb824d94001974a4bfa78e7270e43476a8d940",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct-GGUF/resolve/d0a692ef765eefbf2fabb130b3cb2e8917e3d225/qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+    "chat_template": "Embedded in the hash-pinned GGUF artifact; no external template or remote model code."
+  },
+  "runtime": {
+    "repository": "ggml-org/llama.cpp",
+    "release": "v0.7.0",
+    "binary_build": "b11669",
+    "commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+    "platform": "Windows x64 CUDA 13.4; same official build for both workers",
+    "assets": [
+      {
+        "filename": "llama-b11669-bin-win-cuda-13.4-x64.zip",
+        "size_bytes": 154582227,
+        "sha256": "3b92d5c064f5032e603e531d3ec8961f3bd6613e5dfad047399a92dec8e95dbc",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/llama-b11669-bin-win-cuda-13.4-x64.zip"
+      },
+      {
+        "filename": "cudart-llama-bin-win-cuda-13.4-x64.zip",
+        "size_bytes": 423535356,
+        "sha256": "738f8c251ac22b70c3ae6f83a10cf222725df0395246a2cf58f32bdb85fbe668",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/cudart-llama-bin-win-cuda-13.4-x64.zip"
+      }
+    ],
+    "linux_delivery_assets": [
+      {
+        "filename": "cudart-llama-b11669-bin-ubuntu-cuda-13.4-x64.tar.gz",
+        "size_bytes": 440236547,
+        "sha256": "1108bd9300a281e8eabb18d3fa028d4240ecd983f9f90dbbbc3297671016d697",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/cudart-llama-b11669-bin-ubuntu-cuda-13.4-x64.tar.gz"
+      },
+      {
+        "filename": "llama-b11669-bin-ubuntu-cuda-13.4-x64.tar.gz",
+        "size_bytes": 153679828,
+        "sha256": "80878473d27278dbe9c38fb7e704f292a51e889d3c28a1e863137cdee1e2ba4e",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/llama-b11669-bin-ubuntu-cuda-13.4-x64.tar.gz"
+      }
+    ]
+  },
+  "inference": {
+    "context_tokens": 16384,
+    "parallel_slots": 1,
+    "gpu_layers": 99,
+    "split_mode": "none",
+    "threads": 6,
+    "batch_tokens": 512,
+    "microbatch_tokens": 128,
+    "flash_attention": "on",
+    "key_cache_type": "f16",
+    "value_cache_type": "f16",
+    "automatic_fit": false,
+    "temperature": 0,
+    "seed": 0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "cache_prompt": false,
+    "speculative_decoding": false,
+    "remote_model_code": false
+  },
+  "probe": {
+    "host": "127.0.0.1",
+    "port": 18081,
+    "maximum_new_tokens": 128,
+    "long_prompt_note_lines": 384,
+    "request_timeout_seconds": 180,
+    "startup_timeout_seconds": 180,
+    "purpose": "Measure startup, full configured context allocation, and short constrained coding-related generation only."
+  },
+  "evaluation_status": {
+    "repair_success": "Not measured",
+    "native_dual_gpu_preflight": "See dual-gpu-preflight-result.json when available; do not infer success from this configuration.",
+    "linux_harness": "Not yet validated",
+    "target_budgets": "Confirmed in evaluation-decisions.json; unchanged per attempt on either worker."
+  },
+  "workers": [
+    {
+      "id": "gpu0",
+      "gpu_uuid": "GPU-f916a545-bd79-f0eb-7bd5-c4e07f45e32b",
+      "device_name": "NVIDIA GeForce RTX 4080 SUPER",
+      "host": "127.0.0.1",
+      "port": 18081
+    },
+    {
+      "id": "gpu1",
+      "gpu_uuid": "GPU-48a8b0be-d748-a2b4-65b3-513a3a0a4595",
+      "device_name": "NVIDIA GeForce RTX 5060 Ti",
+      "host": "127.0.0.1",
+      "port": 18082
+    }
+  ],
+  "scheduling": {
+    "slots_per_worker": 1,
+    "model_sharding": false,
+    "target_assignment": "Freeze goal-balanced case-to-worker assignment before results; all three conditions for a case use that worker.",
+    "package_version": "Freeze one package until all worker results close before adapting it.",
+    "source_acquisition": "Preserve declared source-memory update order; parallelism must not change source experience chronology."
+  }
+}

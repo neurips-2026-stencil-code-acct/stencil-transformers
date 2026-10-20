@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-20T08:52:19.325976+00:00",
+  "status": "passed_dual_gpu_native_inference_only",
+  "scope": "Native Windows dual-worker inference only; no generated code execution, repair success, or Linux Harness validation.",
+  "inference_lock_file": "inference-dual-gpu.lock.json",
+  "inference_lock_sha256": "b4e45ec71ebf730597f66e48e2928fe70a80c2c81220df8820453dd5c6cac252",
+  "probe_script_sha256": "3b3a7c5d8c2add51e1735fd548ea70e3828112d80bc39882e7c270a0fdc44cdf",
+  "effective_probe_limits": {
+    "global_seconds_after_download": 300,
+    "startup_seconds_per_worker": 120,
+    "requests": "Bounded by the remaining absolute global deadline; no retry."
+  },
+  "legacy_probe_config_note": "The inherited lock probe section belongs to the original single-GPU probe; this script's actual caps are recorded above.",
+  "artifacts_verified_by_size_and_sha256": true,
+  "server_executable_sha256": "6a4635aeb35656153d4bfeeddf761d24ed84aada9c9108d580737cbed465141b",
+  "model": {
+    "repository": "Qwen/Qwen2.5-Coder-14B-Instruct-GGUF",
+    "revision": "d0a692ef765eefbf2fabb130b3cb2e8917e3d225",
+    "filename": "qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+    "quantization": "Q4_K_M",
+    "size_bytes": 8988110272,
+    "sha256": "c1e659736d89ac1065fb495330fb824d94001974a4bfa78e7270e43476a8d940",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct-GGUF/resolve/d0a692ef765eefbf2fabb130b3cb2e8917e3d225/qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+    "chat_template": "Embedded in the hash-pinned GGUF artifact; no external template or remote model code."
+  },
+  "runtime": {
+    "repository": "ggml-org/llama.cpp",
+    "release": "v0.7.0",
+    "binary_build": "b11669",
+    "commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+    "platform": "Windows x64 CUDA 13.4; same official build for both workers",
+    "assets": [
+      {
+        "filename": "llama-b11669-bin-win-cuda-13.4-x64.zip",
+        "size_bytes": 154582227,
+        "sha256": "3b92d5c064f5032e603e531d3ec8961f3bd6613e5dfad047399a92dec8e95dbc",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/llama-b11669-bin-win-cuda-13.4-x64.zip"
+      },
+      {
+        "filename": "cudart-llama-bin-win-cuda-13.4-x64.zip",
+        "size_bytes": 423535356,
+        "sha256": "738f8c251ac22b70c3ae6f83a10cf222725df0395246a2cf58f32bdb85fbe668",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/cudart-llama-bin-win-cuda-13.4-x64.zip"
+      }
+    ],
+    "linux_delivery_assets": [
+      {
+        "filename": "cudart-llama-b11669-bin-ubuntu-cuda-13.4-x64.tar.gz",
+        "size_bytes": 440236547,
+        "sha256": "1108bd9300a281e8eabb18d3fa028d4240ecd983f9f90dbbbc3297671016d697",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/cudart-llama-b11669-bin-ubuntu-cuda-13.4-x64.tar.gz"
+      },
+      {
+        "filename": "llama-b11669-bin-ubuntu-cuda-13.4-x64.tar.gz",
+        "size_bytes": 153679828,
+        "sha256": "80878473d27278dbe9c38fb7e704f292a51e889d3c28a1e863137cdee1e2ba4e",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/llama-b11669-bin-ubuntu-cuda-13.4-x64.tar.gz"
+      }
+    ]
+  },
+  "inference": {
+    "context_tokens": 16384,
+    "parallel_slots": 1,
+    "gpu_layers": 99,
+    "split_mode": "none",
+    "threads": 6,
+    "batch_tokens": 512,
+    "microbatch_tokens": 128,
+    "flash_attention": "on",
+    "key_cache_type": "f16",
+    "value_cache_type": "f16",
+    "automatic_fit": false,
+    "temperature": 0,
+    "seed": 0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "cache_prompt": false,
+    "speculative_decoding": false,
+    "remote_model_code": false
+  },
+  "gpu_before": [
+    "0, NVIDIA GeForce RTX 4080 SUPER, GPU-f916a545-bd79-f0eb-7bd5-c4e07f45e32b, 16376, 2049, 13997, 610.88, 8.9",
+    "1, NVIDIA GeForce RTX 5060 Ti, GPU-48a8b0be-d748-a2b4-65b3-513a3a0a4595, 16311, 10, 16041, 610.88, 12.0"
+  ],
+  "host_memory_before": {
+    "total_physical_bytes": 33409073152,
+    "available_physical_bytes": 12706312192,
+    "memory_load_percent": 61
+  },
+  "workers": [
+    {
+      "worker": {
+        "id": "gpu0",
+        "gpu_uuid": "GPU-f916a545-bd79-f0eb-7bd5-c4e07f45e32b",
+        "device_name": "NVIDIA GeForce RTX 4080 SUPER",
+        "host": "127.0.0.1",
+        "port": 18081
+      },
+      "startup_seconds": 4.98399999999674,
+      "device_verification": {
+        "expected_device_verified": true,
+        "all_layers_offloaded": 49,
+        "cuda_kv_allocation_verified": true,
+        "log_sha256_at_load": "5003ea78e94f15311c4f939fe0c7d3bb040d51549d6f7cae41c711b7f76ef7b7",
+        "evidence": [
+          "0.00.986.477 I cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 4080 SUPER (16375 MiB, 15061 MiB free)",
+          "0.01.060.483 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 4080 SUPER) (0000:01:00.0) - 15061 MiB free",
+          "0.01.685.737 I load_tensors: offloaded 49/49 layers to GPU",
+          "0.04.358.912 I llama_kv_cache:      CUDA0 KV buffer size =  3072.00 MiB"
+        ]
+      },
+      "properties": {
+        "default_generation_settings": {
+          "params": {
+            "seed": 4294967295,
+            "temperature": 0.800000011920929,
+            "dynatemp_range": 0.0,
+            "dynatemp_exponent": 1.0,
+            "top_k": 40,
+            "top_p": 0.949999988079071,
+            "min_p": 0.05000000074505806,
+            "top_n_sigma": -1.0,
+            "xtc_probability": 0.0,
+            "xtc_threshold": 0.10000000149011612,
+            "typical_p": 1.0,
+            "repeat_last_n": 64,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "frequency_penalty": 0.0,
+            "dry_multiplier": 0.0,
+            "dry_base": 1.75,
+            "dry_allowed_length": 2,
+            "dry_penalty_last_n": 64,
+            "mirostat": 0,
+            "mirostat_tau": 5.0,
+            "mirostat_eta": 0.10000000149011612,
+            "adaptive_target": -1.0,
+            "adaptive_decay": 0.8999999761581421,
+            "max_tokens": -1,
+            "n_predict": -1,
+            "n_keep": 0,
+            "n_discard": 0,
+            "ignore_eos": false,
+            "stream": false,
+            "n_probs": 0,
+            "min_keep": 0,
+            "chat_format": "Content-only",
+            "reasoning_format": "none",
+            "reasoning_in_content": false,
+            "generation_prompt": "",
+            "samplers": [
+              "penalties",
+              "dry",
+              "top_n_sigma",
+              "top_k",
+              "typ_p",
+              "top_p",
+              "min_p",
+              "xtc",
+              "temperature"
+            ],
+            "speculative.types": "none",
+            "timings_per_token": false,
+            "post_sampling_probs": false,
+            "backend_sampling": false,
+            "lora": []
+          },
+          "n_ctx": 16384
+        },
+        "total_slots": 1,
+        "model_alias": "C:\\projects\\OpenRSI-Index\\experiments\\grouped-leakage-transfer\\local\\downloads\\qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+        "model_ftype": "Q4_K - Medium",
+        "model_path": "C:\\projects\\OpenRSI-Index\\experiments\\grouped-leakage-transfer\\local\\downloads\\qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+        "modalities": {
+          "vision": false,
+          "video": false,
+          "audio": false
+        },
+        "media_marker": "<__media_DKgIPlqj7K3c1LCIJxJbxszWU9hJyfBx__>",
+        "endpoint_slots": true,
+        "endpoint_props": false,
+        "endpoint_metrics": false,
+        "ui": false,
+        "ui_settings": {},
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+        "chat_template_caps": {
+          "supports_object_arguments": true,
+          "supports_parallel_tool_calls": true,
+          "supports_preserve_reasoning": false,
+          "supports_reasoning_effort": false,
+          "supports_string_content": true,
+          "supports_system_role": true,
+          "supports_tool_calls": true,
+          "supports_tools": true,
+          "supports_typed_content": false
+        },
+        "bos_token": "<|endoftext|>",
+        "eos_token": "<|im_end|>",
+        "build_info": "b11669-620d2225c",
+        "is_sleeping": false,
+        "cors_proxy_enabled": false
+      },
+      "measurements": [
+        {
+          "repeat": 1,
+          "long_prompt": false,
+          "wall_seconds": 0.6879999999946449,
+          "prompt_tokens": 43,
+          "completion_tokens": 28,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 43,
+            "prompt_ms": 255.992,
+            "prompt_per_token_ms": 5.9533023255813955,
+            "prompt_per_second": 167.97399918747462,
+            "predicted_n": 28,
+            "predicted_ms": 429.186,
+            "predicted_per_token_ms": 15.895777777777777,
+            "predicted_per_second": 62.909787364918714
+          },
+          "action": {
+            "action": "read_file",
+            "scope": "repository",
+            "path": "src/split.py"
+          },
+          "generated_action_executed": false
+        },
+        {
+          "repeat": 2,
+          "long_prompt": false,
+          "wall_seconds": 0.5,
+          "prompt_tokens": 43,
+          "completion_tokens": 28,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 43,
+            "prompt_ms": 48.448,
+            "prompt_per_token_ms": 1.1266976744186046,
+            "prompt_per_second": 887.549537648613,
+            "predicted_n": 28,
+            "predicted_ms": 412.518,
+            "predicted_per_token_ms": 15.278444444444444,
+            "predicted_per_second": 65.45168938082702
+          },
+          "action": {
+            "action": "read_file",
+            "scope": "repository",
+            "path": "src/split.py"
+          },
+          "generated_action_executed": false
+        },
+        {
+          "repeat": 3,
+          "long_prompt": true,
+          "wall_seconds": 4.0310000000026776,
+          "prompt_tokens": 9533,
+          "completion_tokens": 28,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 9533,
+            "prompt_ms": 3459.908,
+            "prompt_per_token_ms": 0.3629401028007972,
+            "prompt_per_second": 2755.2755738013843,
+            "predicted_n": 28,
+            "predicted_ms": 494.991,
+            "predicted_per_token_ms": 18.333,
+            "predicted_per_second": 54.54644629902362
+          },
+          "action": {
+            "action": "read_file",
+            "scope": "repository",
+            "path": "src/split.py"
+          },
+          "generated_action_executed": false
+        }
+      ],
+      "status": "passed_inference_only"
+    },
+    {
+      "worker": {
+        "id": "gpu1",
+        "gpu_uuid": "GPU-48a8b0be-d748-a2b4-65b3-513a3a0a4595",
+        "device_name": "NVIDIA GeForce RTX 5060 Ti",
+        "host": "127.0.0.1",
+        "port": 18082
+      },
+      "startup_seconds": 6.5,
+      "device_verification": {
+        "expected_device_verified": true,
+        "all_layers_offloaded": 49,
+        "cuda_kv_allocation_verified": true,
+        "log_sha256_at_load": "2b9c85ddfd22959d50fd5f5ccb11c4404957474f03226de73c26cc0b40eb7657",
+        "evidence": [
+          "0.00.184.194 I cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 5060 Ti (16310 MiB, 15172 MiB free)",
+          "0.00.266.827 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 5060 Ti) (0000:05:00.0) - 15172 MiB free",
+          "0.00.912.519 I load_tensors: offloaded 49/49 layers to GPU",
+          "0.06.027.793 I llama_kv_cache:      CUDA0 KV buffer size =  3072.00 MiB"
+        ]
+      },
+      "properties": {
+        "default_generation_settings": {
+          "params": {
+            "seed": 4294967295,
+            "temperature": 0.800000011920929,
+            "dynatemp_range": 0.0,
+            "dynatemp_exponent": 1.0,
+            "top_k": 40,
+            "top_p": 0.949999988079071,
+            "min_p": 0.05000000074505806,
+            "top_n_sigma": -1.0,
+            "xtc_probability": 0.0,
+            "xtc_threshold": 0.10000000149011612,
+            "typical_p": 1.0,
+            "repeat_last_n": 64,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "frequency_penalty": 0.0,
+            "dry_multiplier": 0.0,
+            "dry_base": 1.75,
+            "dry_allowed_length": 2,
+            "dry_penalty_last_n": 64,
+            "mirostat": 0,
+            "mirostat_tau": 5.0,
+            "mirostat_eta": 0.10000000149011612,
+            "adaptive_target": -1.0,
+            "adaptive_decay": 0.8999999761581421,
+            "max_tokens": -1,
+            "n_predict": -1,
+            "n_keep": 0,
+            "n_discard": 0,
+            "ignore_eos": false,
+            "stream": false,
+            "n_probs": 0,
+            "min_keep": 0,
+            "chat_format": "Content-only",
+            "reasoning_format": "none",
+            "reasoning_in_content": false,
+            "generation_prompt": "",
+            "samplers": [
+              "penalties",
+              "dry",
+              "top_n_sigma",
+              "top_k",
+              "typ_p",
+              "top_p",
+              "min_p",
+              "xtc",
+              "temperature"
+            ],
+            "speculative.types": "none",
+            "timings_per_token": false,
+            "post_sampling_probs": false,
+            "backend_sampling": false,
+            "lora": []
+          },
+          "n_ctx": 16384
+        },
+        "total_slots": 1,
+        "model_alias": "C:\\projects\\OpenRSI-Index\\experiments\\grouped-leakage-transfer\\local\\downloads\\qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+        "model_ftype": "Q4_K - Medium",
+        "model_path": "C:\\projects\\OpenRSI-Index\\experiments\\grouped-leakage-transfer\\local\\downloads\\qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+        "modalities": {
+          "vision": false,
+          "video": false,
+          "audio": false
+        },
+        "media_marker": "<__media_OsRHJofSsphdDAiUbyh7meogm9fWs6Tr__>",
+        "endpoint_slots": true,
+        "endpoint_props": false,
+        "endpoint_metrics": false,
+        "ui": false,
+        "ui_settings": {},
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+        "chat_template_caps": {
+          "supports_object_arguments": true,
+          "supports_parallel_tool_calls": true,
+          "supports_preserve_reasoning": false,
+          "supports_reasoning_effort": false,
+          "supports_string_content": true,
+          "supports_system_role": true,
+          "supports_tool_calls": true,
+          "supports_tools": true,
+          "supports_typed_content": false
+        },
+        "bos_token": "<|endoftext|>",
+        "eos_token": "<|im_end|>",
+        "build_info": "b11669-620d2225c",
+        "is_sleeping": false,
+        "cors_proxy_enabled": false
+      },
+      "measurements": [
+        {
+          "repeat": 1,
+          "long_prompt": false,
+          "wall_seconds": 0.7189999999973224,
+          "prompt_tokens": 43,
+          "completion_tokens": 28,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 43,
+            "prompt_ms": 82.306,
+            "prompt_per_token_ms": 1.914093023255814,
+            "prompt_per_second": 522.4406483123953,
+            "predicted_n": 28,
+            "predicted_ms": 631.998,
+            "predicted_per_token_ms": 23.407333333333334,
+            "predicted_per_second": 42.721654182449946
+          },
+          "action": {
+            "action": "read_file",
+            "scope": "repository",
+            "path": "src/split.py"
+          },
+          "generated_action_executed": false
+        },
+        {
+          "repeat": 2,
+          "long_prompt": false,
+          "wall_seconds": 0.7189999999973224,
+          "prompt_tokens": 43,
+          "completion_tokens": 28,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 43,
+            "prompt_ms": 68.045,
+            "prompt_per_token_ms": 1.5824418604651163,
+            "prompt_per_second": 631.93474906312,
+            "predicted_n": 28,
+            "predicted_ms": 629.017,
+            "predicted_per_token_ms": 23.29692592592593,
+            "predicted_per_second": 42.92411810809565
+          },
+          "action": {
+            "action": "read_file",
+            "scope": "repository",
+            "path": "src/split.py"
+          },
+          "generated_action_executed": false
+        },
+        {
+          "repeat": 3,
+          "long_prompt": true,
+          "wall_seconds": 7.875,
+          "prompt_tokens": 9533,
+          "completion_tokens": 28,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 9533,
+            "prompt_ms": 7039.894,
+            "prompt_per_token_ms": 0.738476240427987,
+            "prompt_per_second": 1354.1397072171824,
+            "predicted_n": 28,
+            "predicted_ms": 761.165,
+            "predicted_per_token_ms": 28.191296296296294,
+            "predicted_per_second": 35.47194103775134
+          },
+          "action": {
+            "action": "read_file",
+            "scope": "repository",
+            "path": "src/split.py"
+          },
+          "generated_action_executed": false
+        }
+      ],
+      "status": "passed_inference_only"
+    }
+  ],
+  "limitations": [
+    "Short action generations are a compatibility check, not full repair throughput.",
+    "GPU-wide memory includes other processes; host availability is a snapshot.",
+    "No target ML pipeline or experience-building cycle has run."
+  ],
+  "gpu_both_loaded": [
+    "0, NVIDIA GeForce RTX 4080 SUPER, GPU-f916a545-bd79-f0eb-7bd5-c4e07f45e32b, 16376, 13567, 2479, 610.88, 8.9",
+    "1, NVIDIA GeForce RTX 5060 Ti, GPU-48a8b0be-d748-a2b4-65b3-513a3a0a4595, 16311, 11401, 4650, 610.88, 12.0"
+  ],
+  "host_memory_both_loaded": {
+    "total_physical_bytes": 33409073152,
+    "available_physical_bytes": 3936284672,
+    "memory_load_percent": 88
+  },
+  "concurrent_probe_wall_seconds": 9.312999999994645,
+  "gpu_after_requests": [
+    "0, NVIDIA GeForce RTX 4080 SUPER, GPU-f916a545-bd79-f0eb-7bd5-c4e07f45e32b, 16376, 13652, 2394, 610.88, 8.9",
+    "1, NVIDIA GeForce RTX 5060 Ti, GPU-48a8b0be-d748-a2b4-65b3-513a3a0a4595, 16311, 11411, 4640, 610.88, 12.0"
+  ],
+  "host_memory_after_requests": {
+    "total_physical_bytes": 33409073152,
+    "available_physical_bytes": 3498975232,
+    "memory_load_percent": 89
+  },
+  "cleanup_errors": [],
+  "total_preflight_seconds_excluding_download": 22.421999999991385,
+  "host_memory_after_cleanup": {
+    "total_physical_bytes": 33409073152,
+    "available_physical_bytes": 13152440320,
+    "memory_load_percent": 60
+  },
+  "gpu_after_cleanup": [
+    "0, NVIDIA GeForce RTX 4080 SUPER, GPU-f916a545-bd79-f0eb-7bd5-c4e07f45e32b, 16376, 2095, 13951, 610.88, 8.9",
+    "1, NVIDIA GeForce RTX 5060 Ti, GPU-48a8b0be-d748-a2b4-65b3-513a3a0a4595, 16311, 10, 16041, 610.88, 12.0"
+  ]
+}
