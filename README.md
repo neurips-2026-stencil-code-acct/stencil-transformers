@@ -1,4 +1,4 @@
-# Stencil Transformers paper reproducibility snapshot
+# A Mechanistic Study on Stencil Transformers
 
 ## Paper
 
