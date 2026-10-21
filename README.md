@@ -1,13 +1,22 @@
 # Stencil Transformers paper reproducibility snapshot
 
-## Authorship
+## Paper
 
-Author: Matthew Shell
+**Testing Whether Attention Recovers Finite-Difference Stencils in PDE Transformers**  
+**Author:** Matthew Shell  
+**Venue:** Interpretability for Discovery: Understanding and Discovering Novel Knowledge in AI Models (Interp4Discovery), a NeurIPS 2026 workshop  
+**Presentation:** Poster
 
-This repository is the paper-scoped reproducibility snapshot of
-https://github.com/shellmatthewk/stencil-transformers.
+- [Official NeurIPS paper entry](https://neurips.cc/virtual/2026/loc/atlanta/164266)
+- [Official workshop programme](https://neurips.cc/virtual/2026/loc/atlanta/workshop/137578)
+- [OpenReview paper](https://openreview.net/forum?id=6ypqc2JAmV)
 
-Associated paper: https://openreview.net/forum?id=6ypqc2JAmV
+This study examines whether attention weights in transformers trained on heat
+diffusion and Lax--Friedrichs advection recover known finite-difference update
+rules. Attention-only controls and attention-replacement experiments test whether
+accurate prediction is evidence that attention reproduces the underlying stencil.
+
+## Repository contents
 
 This folder is the readable, paper-scoped subset of the parent repository. It
 contains the code, compact intermediate arrays, saved tables, validation tests,
